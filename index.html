@@ -5,54 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nord Squad</title>
     <style>
+        :root {
+            --primary-color: #1e90ff;
+            --secondary-color: #333;
+            --background-color: #f9f9f9;
+            --header-bg: #222;
+            --header-color: #fff;
+        }
+
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: var(--background-color);
+            color: var(--secondary-color);
             line-height: 1.6;
         }
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #fff;
-            border-bottom: 1px solid #ddd;
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
         }
-        header img {
-            width: 150px;
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
             height: auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-color);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header img {
+            width: 120px;
             margin-bottom: 20px;
         }
+
         header h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: #222;
-        }
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-        section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-        section p {
+            font-size: 2.5rem;
             margin: 10px 0;
-            font-size: 1rem;
         }
-        footer {
-            background-color: #222;
-            color: #fff;
+
+        header p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 20px;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
-        footer a {
-            color: #1e90ff;
-            text-decoration: none;
+
+        section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        .contact-links a {
+            display: inline-block;
+            margin: 10px 15px;
+            padding: 10px 20px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .contact-links a:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--header-bg);
+            color: var(--header-color);
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            header {
+                padding: 60px 20px;
+            }
+
+            header h1 {
+                font-size: 3rem;
+            }
+
+            section {
+                padding: 60px 40px;
+            }
+
+            section h2 {
+                font-size: 2.5rem;
+            }
+
+            section p {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -61,21 +135,25 @@
 <header>
     <img src="./logo.png" alt="Nord Squad Logo">
     <h1>Welcome to Nord Squad</h1>
-    <p>Your trusted partner in creative solutions.</p>
+    <p>Innovating Creativity, Simplifying Solutions.</p>
 </header>
 
-<section>
+<section id="about">
     <h2>About Us</h2>
-    <p>Nord Squad is an indie company focused on delivering innovative and creative solutions for modern challenges. With a passion for quality and simplicity, we bring ideas to life.</p>
+    <p>Nord Squad is a passionate indie company delivering innovative and creative solutions. We combine modern design with functionality, ensuring every project we undertake inspires and engages.</p>
+    <p>Whether it's digital design or creative projects, we put simplicity and quality first.</p>
 </section>
 
-<section>
+<section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:nord.squad.team@gmail.com">nord.squad.team@gmail.co</a></p>
+    <p>Have a project in mind or need to reach us? Feel free to get in touch!</p>
+    <div class="contact-links">
+        <a href="mailto:nord.squad.team@gmail.com">Email Us</a>
+    </div>
 </section>
 
 <footer>
-    <p>&copy; 2024 Nord Squad. All rights reserved.</p>
+    <p>&copy; 2024 Nord Squad. Crafted with care and ❤️.</p>
 </footer>
 
 </body>
